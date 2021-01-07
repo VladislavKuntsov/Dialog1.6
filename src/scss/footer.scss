@@ -1,0 +1,56 @@
+.wrapper_footer {
+max-width: 1120px;
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        font-size: 14px;
+        color: $colorFooter;
+        line-height: 16px;
+        border-top: 1px solid $aquamarineLight;
+        
+        @media (min-width:$screen-md) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:flex-start;
+        }
+
+        .footer__development-team {
+            text-align: center;
+            margin-bottom: $marginS;
+            margin-top: $marginS;
+            @media (min-width:$screen-md) {
+                margin-top: 0;
+                text-align: start;
+                margin-left: $marginM;
+                min-width: 220px;
+            }
+            @media (min-width:$screen-xl) {
+                margin-left: $marginL;
+            }
+        }
+
+        .footer__privacy-policy {
+            text-align: center;
+            margin-bottom: $marginS;
+            @media (min-width:$screen-md) {
+            }
+        }
+
+        .footer__offer {
+            text-align: center;
+            margin-bottom: 19px;
+            @media (min-width: $screen-md) {
+                text-align: end;
+                margin-right: $marginM;
+                width: 213px;
+                max-width: 330px;
+            }
+            @media (min-width: $screen-xl) {
+                width: 330px;
+                margin-right: $marginL;
+            }
+        }
+    }
+}   

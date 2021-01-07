@@ -1,0 +1,283 @@
+.swiper-bottom {
+    max-width: 1120px;
+    
+    .swiper-container {
+       margin-right: 8px; 
+       
+       @media (min-width: $screen-md) {
+        margin-right: $marginM;
+        margin-left: $marginM;
+        } 
+        @media (min-width: $screen-xl) {
+            
+            margin-right: $marginL;
+            margin-left: $marginL;
+            } 
+    }
+
+    .gradient {
+        position: absolute;
+        content: "";
+        right: -8px;
+        top: 0;
+        height: 200px;
+        width: 24px;
+        background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+        z-index: 2; 
+        
+        @media (min-width: $screen-md) {
+           display: none;
+       }
+    }
+
+    .title {
+        background: linear-gradient(90deg, $colorGradient 0%, $white 98.61%);
+        border-top: 1px solid $aquamarineLight;   
+    }
+
+    .title h2 {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $colorTitleH2;
+        text-transform: uppercase;
+        padding: $paddingS;
+        margin: 0;
+        
+        @media (min-width:$screen-md){
+            padding-left: $paddingM;
+        }
+        
+        @media (min-width:$screen-xl){
+            padding-left: $paddingL;
+        }
+    }
+
+    .swiper-wrapper {
+        margin-top: 16px ;
+        list-style: none;
+        padding: 0; 
+       
+        
+        @media(min-width: $screen-md) {
+            display: table;
+            border-collapse: collapse;
+            margin: 0;
+
+        }
+    }
+
+    .swiper-slide {
+       width: 260px;
+      
+       height: 200px;
+       position: relative;
+       background: $white;
+       
+       font-size: 14px;
+       line-height: 16px;
+
+       @media(min-width: $screen-md) {
+            display: table-row;
+            height: 100%;
+            border-bottom: 1px solid $ColorBorderSlide;
+            border-left: 32px solid $white;
+            border-right: 32px solid $white;
+
+            &:nth-child(1) {
+                background-color: inherit;
+                border: none;
+                p {
+                    padding: 31px 0 16px 16px;
+                    opacity: 0.72;
+                }
+            }
+        }
+        @media(min-width: $screen-xl) {
+            border-left: 48px solid $white;
+            border-right: 48px solid $white;
+            &:nth-child(1) {
+                background-color: inherit;
+                border: none;
+                p {
+                    padding: 31px 0 16px 24px;
+                    opacity: 0.72;
+                }
+            }
+
+        }
+
+
+        &:nth-child(1),
+        &:nth-child(6) {
+            display: none;
+            @media(min-width: $screen-md) {
+                display: table-row;
+            }
+        }
+
+        &:nth-child(2) {
+            margin-left: 8px;
+            @media(min-width: $screen-md) {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            @media(min-width: $screen-md) {
+                border-bottom: none; 
+            }
+        }
+
+        &:nth-child(7) {
+            margin-right: -30px;
+        }
+
+        & p:last-child {
+            width: 119px;
+        }
+
+        
+       
+        & p {
+            margin: 0 0 0 $marginS;
+            line-height: 18px;
+            letter-spacing: 0.2px;
+            
+            @media(min-width: $screen-md) {
+                display: table-cell;
+                padding: 23px 0; ///
+            }
+        }
+
+        & p:nth-child(4),p:nth-child(6) {
+            padding-left: $paddingS;
+        }
+
+        & h3 {
+           color: $colorTitleH2;
+           font-size: 14px;
+            line-height: 16px;
+            mix-blend-mode: normal;
+            opacity: 0.72; 
+            margin: $marginS 0 4px $marginS;
+
+            @media(min-width: $screen-md) {
+                display: none;
+            }
+        }
+    
+        .swiper-slide__link {
+            position: absolute;
+            width: 107px;
+            height: 32px;
+            right: 16px;
+            top: 152px;
+            border-radius: 50px 50px;
+            background-color: $colorbottom;
+
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 32px;
+            letter-spacing: -0.15px;
+            text-transform: uppercase;
+            text-align: left;
+            vertical-align: middle;
+            color: #FFFFFF;
+            padding-left: 12px;
+            
+            cursor: pointer; 
+
+            
+            &:after {
+                content: url(../img/dropdown.svg);
+                width: 24px;
+                height: 24px;
+                margin-left: 17px;
+                
+            } 
+
+            @media(min-width: $screen-md) {
+                position: static;
+                display: block;
+                top: 0;
+                left: 0;
+                line-height: 32px;
+            }
+               
+        }    
+
+    }
+
+
+    .swiper-pagination {
+        position: relative;
+        top: 0;
+        margin-bottom: 16px;
+        @media(min-width: $screen-md){
+           display:none;
+        }
+    }
+        .swiper-pagination-bullet {
+            margin-right: 12px;
+            margin-left: 0;
+            background-color: $colorPaginator;
+            opacity: 1;
+            height: 12px;
+            width: 12px;
+        }
+        
+        .swiper-pagination-fraction {
+            bottom: 0px;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background-color: $colorPaginatorActive;
+        }
+
+    .swiper-information {
+        margin: $marginS;
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        max-width: 421px;
+
+        @media (min-width: $screen-md) {
+            width: 421px;
+            margin: $paddingM $paddingM $paddingS $paddingM;
+        }
+
+        @media (min-width: $screen-xl) {
+            margin-left: $marginL;
+        }
+
+    }
+
+    .commercial-offer {
+        margin-left: $marginS;
+        margin-right: $marginS;
+        margin-bottom: 40px;
+        color: $text;
+        font-weight: 500;
+        position: relative;
+        a {
+        &::after {
+            content: url(../img/more.svg);
+            position: absolute;
+            transform: translateY(-2px);
+        }  
+        }
+        @media (min-width: $screen-md) {
+            width: 300px;
+            margin-left: $marginM;
+            margin-bottom: 47px;
+        }
+
+        @media (min-width: $screen-xl) {
+            margin-left: $marginL;
+        }
+        
+    }
+}

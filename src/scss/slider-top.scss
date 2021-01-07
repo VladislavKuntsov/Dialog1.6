@@ -1,0 +1,219 @@
+.swiper-top {
+    max-width: 1120px;
+    
+   .gradient {
+        content: "";
+        height: 80px;
+        width: 24px;
+        position: absolute;
+        right: 0px;
+        top: 10%;
+        background-image: linear-gradient(270deg, $colorGradient 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+        z-index: 2; 
+        @media (min-width: $screen-md) {
+          display: none;
+        }
+    }
+
+    .title {
+        background: linear-gradient(90deg, $colorGradient 0%, $white 98.61%);
+        border-top: 1px solid $aquamarineLight; 
+        
+    }
+    .title h2 {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $colorTitleH2;
+        text-transform: uppercase;
+        padding: $paddingS;
+        margin: 0;
+
+        @media(min-width: $screen-md){
+            padding: $paddingS $paddingM;
+        }
+
+        @media (min-width: $screen-xl) {
+            padding: $paddingS $paddingL;
+        }
+
+    }
+    .swiper-wrapper {
+        margin: $marginS 0 $marginS $marginS;
+        list-style: none;
+        padding: 0;
+
+        @media (min-width: $screen-md) {
+            flex-wrap: wrap;
+            margin: 24px 24px 8px 24px;
+            justify-content: start;
+            align-items: flex-start;  
+        }
+        @media (min-width: $screen-xl) {
+            margin: $marginM $marginL 0 $marginL;
+        }
+        
+    }
+    .swiper-slide {
+        width: 240px;
+        height: 72px;
+        position: relative;
+        background: $white;
+        outline: 1px solid $ColorBorderSlide;
+        box-sizing: border-box;
+
+        @media (min-width: $screen-md) {
+            width: 224px;
+            margin-right: $marginM;
+            margin-bottom: $marginS;
+
+            &:nth-child(n + 7) {
+                display: none;
+            }
+        }
+        @media (min-width: $screen-lg) {
+            
+            &:nth-child(n) {
+                display: block;
+            }
+            &:nth-child(n + 9) {
+                display: none;
+            }
+        }
+
+        
+        @media (min-width: $screen-xl) {
+            margin-right: $marginL;
+            width: 240px;
+            &:nth-child(n) {
+                display: block;
+            }
+            &:nth-child(n + 9) {
+                display: none;
+            } 
+        }
+
+        @media(min-width: 1366px) and (max-width: 1407px){
+            &:nth-child(n + 7) {
+                display: none;
+            }
+        }
+    }
+
+    .swiper-slide-Samsung, .swiper-slide-Apple {
+        @media (min-width: $screen-md){
+            display: block;
+        }
+    }
+
+    .swiper-pagination {
+        @media(min-width: $screen-md){
+            display:none;
+        }
+    }
+
+
+    .swiper-slide__logo {
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        left: 16px;
+    }
+    
+    .swiper-slide__link {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;  
+    }
+    .swiper-slide__link {
+        &:before {
+            content: url(../img/goNext.svg);
+        }
+    }
+    .swiper-pagination {
+        position: relative;
+        top: 0;
+        margin-bottom: 24px;
+        }
+        .swiper-pagination-bullet {
+            margin-right: 12px;
+            margin-left: 0;
+        }
+        
+        .swiper-pagination-fraction {
+            bottom: 0px;
+        }
+        
+        .swiper-pagination-bullet {
+            background-color: $colorPaginator;
+            opacity: 1;
+            height: 12px;
+            width: 12px;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: $colorPaginatorActive;
+        }
+        
+        .swiper-slide-Samsung,
+        .swiper-slide-Apple {
+            display: none;
+        }
+        
+        
+        .button-more,
+        .button-less {
+            position: relative;
+            border: none;
+            background-color: inherit; 
+            padding: 0; 
+            border-radius: 50%;
+            border-color: $white;
+            outline: none;
+            font-family: 'TT Lakes';
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.2px;
+            line-height: 24px;
+            margin-left: 56px;
+            display: none;
+            margin-bottom: $marginL;
+        }
+
+        
+        
+        
+
+        .button-more {
+            &:before {
+                content: url(../img/iconArrow.svg);
+                position: absolute;
+                transform: translate(-16px, 1px);
+            }
+            @media(min-width: $screen-md){
+                display: block;
+            }
+            @media (min-width: $screen-xl) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .button-less {
+            &:before {
+                content: url(../img/iconArrow.svg);
+                position: absolute;
+                transform: rotate(180deg) translate(16px,2px); 
+            }
+            @media(min-width: $screen-md){
+                margin-top: 30px;
+                display: none; 
+            }
+            @media(min-width: $screen-xl){
+                margin-bottom: 50px;
+                
+            }
+        }
+        
+}

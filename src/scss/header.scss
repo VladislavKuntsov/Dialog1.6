@@ -1,0 +1,83 @@
+.wrapper_header {
+
+        @media (min-width: $screen-xl) {
+            display: none;   
+        }
+        @media (min-width: $screen-xxl) {
+            margin-left: 320px;  
+        }
+    
+    .header {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid $aquamarineLight;
+        height: 88px;
+        background-color: $white;
+            .header__menu {
+                margin-left: 16px;
+                height: 40px;
+                @media (min-width: 768px) {
+                    margin-left: 24px;   
+                }
+            }
+
+            .header__logo {
+                flex-grow: 1;
+                margin-left: 16.73px;
+                height: 50.81px;
+                @media (min-width: $screen-md) {
+                    margin-left: 42.73px;
+                    &:before {
+                        content: url(../img/divider.svg);
+                        position: absolute;
+                        top: 28px;
+                        left: 84px;  
+                    } 
+                }
+            }
+
+            .header__contact {
+                display: none;
+                height: 40px;
+                @media (min-width: $screen-md) {
+                    display: block;
+                    margin-right: 42px;   
+                }
+            }
+
+            .header__contact a:nth-child(1), 
+            .header__contact a:nth-child(2) {
+                margin-right: 16px;
+            }
+
+            .header__status {
+            margin-right: 16px;
+            height: 40px;
+            @media (min-width: $screen-md) {
+                    margin-right: 24px;   
+                }
+                &:before {
+                    content: url(../img/divider.svg);
+                    position: absolute;
+                    top: 28px;
+                    right: 132px;
+                    @media (min-width: $screen-md) {
+                        right: 142px;   
+                    }
+                } 
+            }
+
+            .header__status a:nth-child(1) {
+                margin-right: 16px; 
+            }
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;   
+            }
+    }
+
+    
+}

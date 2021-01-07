@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.eot');
+  src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+  url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTLakes-Medium.woff') format('woff'),
+  url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Bold.eot');
+  src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+      url('../fonts/TTLakes-Bold.eot') format('embedded-opentype'),
+      url('../fonts/TTLakes-Bold.woff') format('woff'),
+      url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.eot');
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+      url('../fonts/TTLakes-Regular.eot') format('embedded-opentype'),
+      url('../fonts/TTLakes-Regular.woff') format('woff'),
+      url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$white: #ffffff;
+$black: #000000;
+$gray: #F8F8F8;
+$colorGradient: #F8F8F8;
+$aquamarine:  #41f6d7;
+$aquamarineLight: #D9FFF5;
+$ColorBorderSlide: #EAEAEA;
+$colorTitleH2: #7e7e82;
+$colorPaginator: #DDDDDD;
+$colorPaginatorActive: #B5B6BC;
+$form: #B5B6BC;
+$colorTitleBg: #F2F2F2;
+$colorFooter: #7E7E82;
+$colorbottom: #FF3E79;;
+
+$text: #1B1C21;
+
+$marginS: 16px;
+$marginM: 24px;
+$marginL: 32px;
+
+$paddingS: 16px;
+$paddingM: 24px;
+$paddingL: 32px;
+
+$screen-xs: 0;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1120px;
+$screen-xxl: 1366px;
+
+
+html {
+  box-sizing: border-box;
+  font-family: 'TT Lakes', 'Comic', sans-serif;
+  color: $text;
+  margin: 0 auto;
+  
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $gray;
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  @media (min-width: $screen-xxl) {
+    margin-left: 320px; 
+  }
+}
+
+//.sidebar-container {
+//height: auto;
+//}
+
+#filter {
+  display: none;
+  background-color: $white;
+  opacity: 0.96;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+@import 'header';
+@import 'service';
+@import 'slider-top';
+@import 'slider-middle';
+@import 'slider-bottom';
+@import 'footer';
+
+@import 'sidebar-menu';
+@import 'sidebar-feedback';
+@import 'sidebar-call';
+
+
+

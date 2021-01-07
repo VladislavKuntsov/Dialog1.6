@@ -1,0 +1,243 @@
+.service {
+    max-width: 1120px;
+
+    .status {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        margin: 24px 16px;
+            @media(min-width: $screen-md) {
+                margin: $marginM $marginM $marginL $marginM;  
+            }
+
+            @media(min-width: $screen-xl) {
+                margin: 42px 35px 8.37px 35px;  
+            }
+
+            h1 {
+                position: relative;
+                margin: 0;
+                font-size: 28px;
+                line-height: 40px;
+                letter-spacing: -0.6px;
+                
+                &:before {
+                    content: url(../img/highLight.svg);
+                    position: absolute;
+                    top: -3px;
+                    left: -16px;  
+                } 
+                @media (min-width: $screen-md) {
+                    &:before {
+                        left: -24px;   
+                    }
+                }
+                    
+                @media (min-width: $screen-xl) {
+                    &:before {
+                        left: -35px;   
+                    }
+                }
+            
+            }
+
+
+        .status__button {
+            display: flex;
+            flex-wrap: nowrap;
+            display: none;
+                @media(min-width: $screen-xl) {
+                    display: flex;  
+                }
+        
+
+            .status__button-repair,
+            .status__button-check {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 40px;
+                padding: 0;  
+                border: none;
+                background-color: inherit;
+                font-family: 'TT Lakes';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+            } 
+            .status__button-repair {
+                margin-right: $marginL;
+            }
+            .status__repair-img, 
+            .statuss__check-img  {
+                margin-left: 8px;
+            }
+        }
+
+    }
+    .navigation {
+        position: relative;
+
+        &:after , &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            background: transparent;
+        }
+
+        &:after {
+            right: 0;
+            background-image: linear-gradient(to right, transparent 20%, #F8F8F8);
+        }
+        
+        &:before {
+            left: 0;
+            background-image: linear-gradient(to left, transparent 20%, #F8F8F8 );
+        }
+        .navigation__list {
+            display: flex;
+            align-items: flex-start;
+            overflow-x: scroll;
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 $marginS;
+            font-size: 16px;
+            
+            @media (min-width: $screen-md) {
+                margin: 0 $marginM;
+                
+            }
+
+            @media (min-width: $screen-xl) {
+                flex-wrap: wrap;
+                overflow-x: hidden;
+                margin: 0 $marginL;
+                & li:last-child {
+                    padding-bottom: 0;
+                    padding-left: $paddingM;
+                }
+                
+            }
+
+            .navigation__item {
+                flex-shrink: 0;
+                padding: 12px 26px 12px 0px;
+                text-align: center;
+            }
+
+            .navigation__link--active{
+                background-color: #ffffff;
+                padding: 10px;
+                border: 2px solid #B8FFEC;
+                border-radius: 6px;
+            }
+
+            .navigation__link {
+                text-decoration: none;
+                color: #7E7E82;
+            }
+            
+        }
+
+    }
+    .information {
+        @media (min-width: $screen-md) {
+            display: flex;
+            flex-direction: row;
+        }
+        .information-basic {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: $text;
+
+            & p:first-child {
+                margin: 0;
+                margin-bottom: 16px;
+            }
+            & p:nth-child(2) {
+                margin-bottom: 10px;
+            }
+        }
+        .information__container {
+            margin: $marginM $marginS $marginS $marginS;
+        
+            @media (min-width: $screen-md) {
+                margin: $marginL 48px 46px $marginM;
+                min-width: 312px;
+                max-width: 490px;  
+            }
+            @media (min-width: $screen-xl) {
+                margin: 19.22px 32px 13.78px 34px;
+                width: 490px;  
+            }
+            
+            .information-basic p:nth-child(2) {
+                display: none;
+                @media (min-width: $screen-md)  {
+                    display: block; 
+                }
+                @media (min-width: $screen-xl)  {
+                    display: none; 
+                }
+            }
+
+            .information-basic p:nth-child(3) {
+                display: none;
+                @media (min-width: $screen-xl)  {
+                    display: block;  
+                }
+            }
+        }
+    }
+
+    .information__button {
+        margin-left: 8px;
+        
+        
+        .information__button-img {
+            border: none;
+            background-color: inherit;
+            font-family: 'TT Lakes';
+            font-size: 16px; 
+            font-weight: 500;
+            padding: 0;
+            margin-top: 0;
+
+            &:before {
+                content: url(../img/iconArrow.svg);
+                margin-right: $marginS;
+            }
+        }
+
+    }  
+
+    .information__img {
+        margin: $marginS auto $marginS auto;
+        max-width: 520px;
+        
+        @media (min-width:$screen-md) {
+            max-width: 400px;
+            min-width: 360px;
+            max-width: 520px;
+            margin-top: 32px;
+            margin-right: 24px;
+            margin-bottom: 28px;
+
+        }
+        @media (min-width: $screen-xl) {
+            width: 520px;
+            margin-bottom: 32px;
+            margin-top: 19.22px;
+            
+        }
+            
+        .information__img-nameplate {
+            width: 100%;
+            height: auto; 
+        }
+    }
+}
