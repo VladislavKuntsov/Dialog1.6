@@ -1,5 +1,5 @@
-const swiperTop = document.querySelector('.swiper-top');
-const slider = swiperTop.querySelector('.swiper-container');
+const brands = document.querySelector('.brands');
+const slider = brands.querySelector('.swiper-container');
  let mySwiper;
 
  function mobileSlider() {
@@ -30,44 +30,44 @@ const slider = swiperTop.querySelector('.swiper-container');
         showLessMore();
     });
 
-    var slidesTop = swiperTop.querySelectorAll('.swiper-slide');
+    var slidesBrands = brands.querySelectorAll('.swiper-slide');
     
     
     function showLess() {
         if(window.innerWidth >= 768 && window.innerWidth < 992) {
-            for(let i = 6; i < slidesTop .length; i++) {
-                slidesTop[i].style.display = "none"; 
+            for(let i = 6; i < slidesBrands .length; i++) {
+                slidesBrands[i].style.display = "none"; 
             }
         }
 
         if(window.innerWidth >= 992  && window.innerWidth < 1366 ) {
-            for(let i = 8; i < slidesTop.length; i++) {
-                slidesTop[i].style.display = "none"; 
+            for(let i = 8; i < sslidesBrands.length; i++) {
+                slidesBrands[i].style.display = "none"; 
             }
         }
 
          if(window.innerWidth >= 1366 && window.innerWidth < 1408) {
-            for(let i = 6; i < slidesTop.length; i++) {
-                slidesTop[i].style.display = "none";
+            for(let i = 6; i < slidesBrands.length; i++) {
+                slidesBrands[i].style.display = "none";
             }
         } 
         if(window.innerWidth >= 1408 ) {
-            for(let i = 8; i < slidesTop.length; i++) {
-                slidesTop[i].style.display = "none";
+            for(let i = 8; i < slidesBrands.length; i++) {
+                slidesBrands[i].style.display = "none";
             }
         } 
     }
 
     function showMore   () {
         if(window.innerWidth >= 768) {
-            for(let i = 0; i < slidesTop .length; i++) {
-                slidesTop[i].style.display = 'block';
+            for(let i = 0; i < slidesBrands .length; i++) {
+                slidesBrands[i].style.display = 'block';
             }
         }
     }
 
-    var less = swiperTop.querySelector('.button-less');
-    var more = swiperTop.querySelector('.button-more');
+    var less = brands.querySelector('.button-less');
+    var more = brands.querySelector('.button-more');
 
     function showLessMore () {
         less.addEventListener('click', function(evt) { 

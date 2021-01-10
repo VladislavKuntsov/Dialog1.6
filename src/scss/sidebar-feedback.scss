@@ -2,21 +2,25 @@
     display: none;
     &_content {
     position: absolute;
-    top: 0;
+    top: -114px;
     right: 0;
     z-index: 3;
 
     padding: 16px;
     background-color: $white;
     width: 320px;
-        
+    height: 100vh;
+
+        @media(min-width: 360px) {
+        width: 360px;
+    }
         @media(min-width: $screen-sm) {
-            height: 676px;
+            height: 100vh;
         }
 
 
         @media(min-width: $screen-xl) {
-        top: -42px;
+            top: -114px;
         }
 
         @media(min-width: $screen-xxl) {
@@ -27,7 +31,7 @@
         }
     }
 }
-    .feedback__close {
+    .feedback_close {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -43,6 +47,9 @@
             left: -73px;
         }
 
+        &:hover {
+            transform: scale(1.2); 
+        }
     }
 
     .sidebar-feedback_header {

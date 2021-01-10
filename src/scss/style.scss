@@ -93,34 +93,42 @@ body {
 main {
   position: relative;
   margin: 0 auto;
+  
   @media (min-width: $screen-xxl) {
     margin-left: 320px; 
   }
+  
+  .filter {
+    background-color: $white;
+    opacity: 0.96;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+  }
 }
 
-//.sidebar-container {
-//height: auto;
-//}
-
-#filter {
-  display: none;
-  background-color: $white;
-  opacity: 0.96;
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.wrapper_footer {
+  position: relative;
+  
+  @media (min-width: $screen-xxl) {
+    margin-left: 360px; 
+  }
 }
+
+
+
 
 
 
 @import 'header';
 @import 'service';
-@import 'slider-top';
-@import 'slider-middle';
-@import 'slider-bottom';
+@import 'brands';
+@import 'devices';
+@import 'prices';
 @import 'footer';
 
 @import 'sidebar-menu';

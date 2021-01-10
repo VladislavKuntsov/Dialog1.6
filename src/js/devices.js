@@ -1,5 +1,5 @@
-const swiperMiddle = document.querySelector('.swiper-middle');
-const swiperMiddleContainer = swiperMiddle.querySelector('.swiper-container');
+const devices = document.querySelector('.devices');
+const devicesContainer = devices.querySelector('.swiper-container');
 /*  let mySwiperMiddle; */
 
 /*  function mobileSliderMiddle() {
@@ -31,48 +31,48 @@ const swiperMiddleContainer = swiperMiddle.querySelector('.swiper-container');
         showLessMoreMiddle();
     });
 
-    var slidesMiddle = swiperMiddleContainer.querySelectorAll('.swiper-slide');
+    var slidesDevices = devicesContainer.querySelectorAll('.swiper-slide');
     
     
     function showLessMiddle() {
         if(window.innerWidth >= 768 && window.innerWidth < 992) {
-            for(let i = 3; i < slidesMiddle .length; i++) {
+            for(let i = 3; i < slidesDevices .length; i++) {
                 
-                slidesMiddle[i].style.display = "none";
+                slidesDevices[i].style.display = "none";
             }
         }
 
         if(window.innerWidth >= 992  &&  window.innerWidth < 1366) {
-            for(let i = 4; i < slidesMiddle.length; i++) {
-                slidesMiddle[i].style.display = "none";
+            for(let i = 4; i < slidesDevices.length; i++) {
+                slidesDevices[i].style.display = "none";
             }
         }
         if(window.innerWidth >= 1366 && window.innerWidth < 1408) {
-            for(let i = 3; i < slidesMiddle.length; i++) {
-                slidesMiddle[i].style.display = "none";
+            for(let i = 3; i < slidesDevices.length; i++) {
+                slidesDevices[i].style.display = "none";
             }
         } 
 
          if(window.innerWidth >= 1408) {
-            for(let i = 4; i < slidesMiddle.length; i++) {
+            for(let i = 4; i < slidesDevices.length; i++) {
                 
-                slidesMiddle[i].style.display = "none";
+                slidesDevices[i].style.display = "none";
             }
         } 
     }
 
     function showMoreMiddle   () {
         if(window.innerWidth >= 768) {
-            for(let i = 0; i < slidesMiddle .length; i++) {
-                slidesMiddle[i].style.display = 'block';
+            for(let i = 0; i < slidesDevices .length; i++) {
+                slidesDevices[i].style.display = 'block';
                 
             }
         }
  
     }
 
-    var less = swiperMiddle.querySelector('.button-less');
-    var more = swiperMiddle.querySelector('.button-more');
+    var less = devices.querySelector('.button-less');
+    var more = devices.querySelector('.button-more');
 
     function showLessMoreMiddle () {
         less.addEventListener('click', function(evt) { 

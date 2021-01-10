@@ -1,5 +1,8 @@
 .service {
-    max-width: 1120px;
+
+    @media(min-width:1120) and (max-width:1440) {
+        width: 100%;
+    }
 
     .status {
         display: flex;
@@ -10,7 +13,7 @@
                 margin: $marginM $marginM $marginL $marginM;  
             }
 
-            @media(min-width: $screen-xl) {
+            @media(min-width: $screen-xxl) {
                 margin: 42px 35px 8.37px 35px;  
             }
 
@@ -46,7 +49,7 @@
             display: flex;
             flex-wrap: nowrap;
             display: none;
-                @media(min-width: $screen-xl) {
+                @media(min-width: $screen-xxl) {
                     display: flex;  
                 }
         
@@ -65,11 +68,16 @@
                 font-size: 16px;
                 line-height: 24px;
             } 
+            .status__repair-img:hover,
+            .status__check-img:hover{
+                transform: scale(1.2);
+            }
+
             .status__button-repair {
                 margin-right: $marginL;
             }
             .status__repair-img, 
-            .statuss__check-img  {
+            .status__check-img  {
                 margin-left: 8px;
             }
         }
@@ -126,6 +134,10 @@
                 flex-shrink: 0;
                 padding: 12px 26px 12px 0px;
                 text-align: center;
+                
+                &:hover {
+                    transform: scale(1.05); 
+                }
             }
 
             .navigation__link--active{
@@ -168,12 +180,13 @@
             @media (min-width: $screen-md) {
                 margin: $marginL 48px 46px $marginM;
                 min-width: 312px;
-                max-width: 490px;  
+               // max-width: 490px;  
             }
             @media (min-width: $screen-xl) {
                 margin: 19.22px 32px 13.78px 34px;
-                width: 490px;  
+               // width: 490px;  
             }
+
             
             .information-basic p:nth-child(2) {
                 display: none;
@@ -210,6 +223,10 @@
             &:before {
                 content: url(../img/iconArrow.svg);
                 margin-right: $marginS;
+            }
+
+            &:hover {
+                transform: scale(1.05); 
             }
         }
 

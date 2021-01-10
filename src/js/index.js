@@ -1,6 +1,6 @@
 import '../scss/style.scss';
-import '../js/slider-top';
-import '../js/slider-middle';
+import '../js/brands';
+import '../js/devices';
 import '../js/sidebar';
 
 console.log('Works!');

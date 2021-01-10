@@ -1,5 +1,5 @@
-.swiper-top {
-    max-width: 1120px;
+.brands {
+   // max-width: 1120px;
     
    .gradient {
         content: "";
@@ -39,8 +39,17 @@
         }
 
     }
+    .swiper-container {
+        @media(min-width: 1120px) {
+            margin: $marginM 0 8px $marginL;
+        }
+        @media(min-width: 1440px) {
+            margin: $marginM 0 8px $marginL;
+        }
+    }
+            
     .swiper-wrapper {
-        margin: $marginS 0 $marginS $marginS;
+        margin: $marginS $marginS $marginS $marginS;
         list-style: none;
         padding: 0;
 
@@ -51,9 +60,9 @@
             align-items: flex-start;  
         }
         @media (min-width: $screen-xl) {
-            margin: $marginM $marginL 0 $marginL;
+            margin:0;
         }
-        
+   
     }
     .swiper-slide {
         width: 240px;
@@ -63,8 +72,8 @@
         outline: 1px solid $ColorBorderSlide;
         box-sizing: border-box;
 
-        @media (min-width: $screen-md) {
-            width: 224px;
+        @media (min-width: $screen-md) and (max-width:1055px) {
+            width: 29.3%;
             margin-right: $marginM;
             margin-bottom: $marginS;
 
@@ -72,17 +81,18 @@
                 display: none;
             }
         }
-        @media (min-width: $screen-lg) {
-            
+         @media (min-width: 1056px) {
+            width: 240px;
+            margin-right: $marginM;
+            margin-bottom: $marginS;
             &:nth-child(n) {
                 display: block;
             }
             &:nth-child(n + 9) {
                 display: none;
             }
-        }
+        } 
 
-        
         @media (min-width: $screen-xl) {
             margin-right: $marginL;
             width: 240px;
@@ -93,13 +103,32 @@
                 display: none;
             } 
         }
+        @media(min-width: 1120px) and (max-width: 1365px){
+            width: 22%;
+            margin-right: 32px;
+            margin-bottom: 16px;
+        }
 
-        @media(min-width: 1366px) and (max-width: 1407px){
+         @media(min-width: 1366px) and (max-width: 1439px){
+            width: 30.1%;
+            margin-right: 32px;
+            &:nth-child(n) {
+                display: block;
+            }
             &:nth-child(n + 7) {
                 display: none;
             }
         }
-    }
+        @media(min-width: 1440px) {
+            margin-right: 32px;
+            &:nth-child(n) {
+                display: block;
+            }
+            &:nth-child(n + 9) {
+                display: none;
+            }
+        }
+    } 
 
     .swiper-slide-Samsung, .swiper-slide-Apple {
         @media (min-width: $screen-md){
@@ -133,6 +162,10 @@
             content: url(../img/goNext.svg);
         }
     }
+    .swiper-slide__link:hover {
+        transform: translateY(-50%) scale(1.2); 
+    }
+
     .swiper-pagination {
         position: relative;
         top: 0;
@@ -180,6 +213,10 @@
             margin-left: 56px;
             display: none;
             margin-bottom: $marginL;
+
+            &:hover {
+                transform: scale(1.05); 
+            }
         }
 
         
@@ -214,6 +251,5 @@
                 margin-bottom: 50px;
                 
             }
-        }
-        
+        }      
 }
