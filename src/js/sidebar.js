@@ -92,8 +92,9 @@ function openCloseSidebar () {
             body.style.overflow = "hidden";
         }
 
-        if(window.innerWidth > 1440) {
+        if(window.innerWidth > 1366) {
             filter.style.display = 'none';
+            body.style.overflow = "auto";
         }
     })
 
@@ -108,6 +109,7 @@ function openCloseSidebar () {
         
         if(window.innerWidth > 1366) {
             filter.style.display = 'none';  
+            body.style.overflow = "auto";
         }  
 
         if(sidebarMenu.style.display == "block" && window.innerWidth < 1366){
