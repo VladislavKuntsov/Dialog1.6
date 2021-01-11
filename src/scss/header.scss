@@ -1,7 +1,7 @@
 .wrapper_header {
 
-        @media (min-width: $screen-xl) {
-            display: block;   
+        @media (min-width: $screen-xxl) {
+            display: none;   
         }
         @media (min-width: $screen-xxl) {
             margin-left: 320px;  
