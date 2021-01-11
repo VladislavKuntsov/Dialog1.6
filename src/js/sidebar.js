@@ -26,11 +26,14 @@ function openCloseSidebar () {
 
     buttonMenuClose.addEventListener('click', function(evt) { 
         evt.preventDefault();
-        if(sidebarFeedback.style.display == 'none' & sidebarCall.style.display == 'none'){
-          filter.style.display = 'none';
-        }
+        if(sidebarFeedback.style.display == 'none' || sidebarCall.style.display == 'none'){
+          filter.style.display = 'block';
+          console.log("КЛИК");
+        } 
+
         sidebarMenu.style.display = 'none';
         body.style.overflow = "auto";
+        filter.style.display = 'none';
     })
 
     buttonFeedbackOpen.addEventListener('click', function(evt) { 
@@ -44,7 +47,7 @@ function openCloseSidebar () {
 
     buttonFeedbackOpen2.addEventListener('click', function(evt) { 
         evt.preventDefault();
-        if(window.innerWidth < 641){        ///// хочу убрать меню при маленьком экране
+        if(window.innerWidth < 1366){        ///// хочу убрать меню при маленьком экране
             sidebarMenu.style.display = "none"
         }
         if(sidebarCall.style.display == 'block'){   /////// здесь
@@ -66,7 +69,7 @@ function openCloseSidebar () {
 
     buttonCallOpen2.addEventListener('click', function(evt) { 
         evt.preventDefault();
-        if(window.innerWidth < 641){              ///// хочу убрать меню при маленьком экране
+        if(window.innerWidth < 1366){              ///// хочу убрать меню при маленьком экране
             sidebarMenu.style.display = "none"
         }
         if(sidebarFeedback.style.display == 'block'){ //// здесь
@@ -81,7 +84,7 @@ function openCloseSidebar () {
     buttonFeedbackClose.addEventListener('click', function(evt) {    //закрытие обратной связи
         evt.preventDefault();
         sidebarFeedback.style.display = 'none';
-        
+        filter.style.display = 'none';
 
         if(sidebarMenu.style.display == "none" && window.innerWidth < 1366){
             filter.style.display = 'none'; 
@@ -101,7 +104,8 @@ function openCloseSidebar () {
     buttonCallClose.addEventListener('click', function(evt) {   //закрытие заказать звонок
         evt.preventDefault();
         sidebarCall.style.display = 'none';
-
+        filter.style.display = 'none';
+        
         if(sidebarMenu.style.display == "none" && window.innerWidth < 1366){
             filter.style.display = 'none';
             body.style.overflow = "auto";
