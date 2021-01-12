@@ -57,10 +57,10 @@ main {
     left: 0;
     display: none; }
 
-.wrapper-footer {
+.wrapper-footer__footer {
   position: relative; }
   @media (min-width: 1366px) {
-    .wrapper-footer {
+    .wrapper-footer__footer {
       margin-left: 360px; } }
 
 @media (min-width: 1366px) {
