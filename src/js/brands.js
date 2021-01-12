@@ -41,7 +41,7 @@ const slider = brands.querySelector('.swiper-container');
         }
 
         if(window.innerWidth >= 992  && window.innerWidth < 1366 ) {
-            for(let i = 8; i < sslidesBrands.length; i++) {
+            for(let i = 8; i < slidesBrands.length; i++) {
                 slidesBrands[i].style.display = "none"; 
             }
         }

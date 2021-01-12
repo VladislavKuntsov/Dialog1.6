@@ -95,14 +95,16 @@
 
     .main {
 
+        
+
+        @media(min-width: $screen-xs) {
+            flex-grow: 1;
+        }
+
         @media(min-width: $screen-xxl) {
             flex-grow: 1;
         }
 
-        @media(min-width: $screen-md) {
-            flex-grow: 1;
-        }
-        
         .title {
             margin-left:$marginS;
             margin-top:26px;

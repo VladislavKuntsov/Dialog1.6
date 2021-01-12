@@ -1,4 +1,4 @@
-const wrapperHeader = document.querySelector('.wrapper_header');
+const wrapperHeader = document.querySelector('.wrapper-header');
 const sidebarMenu = document.querySelector('.sidebar-menu'); 
 const sidebarFeedback =  document.querySelector('.sidebar-feedback');
 const sidebarCall =  document.querySelector('.sidebar-call');
@@ -105,7 +105,7 @@ function openCloseSidebar () {
         evt.preventDefault();
         sidebarCall.style.display = 'none';
         filter.style.display = 'none';
-        
+
         if(sidebarMenu.style.display == "none" && window.innerWidth < 1366){
             filter.style.display = 'none';
             body.style.overflow = "auto";

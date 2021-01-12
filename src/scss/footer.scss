@@ -1,4 +1,4 @@
-.wrapper_footer {
+.wrapper-footer {
 max-width: 1120px;
 
     .footer {
@@ -24,10 +24,13 @@ max-width: 1120px;
                 margin-top: 0;
                 text-align: start;
                 margin-left: $marginM;
+                margin-bottom: 41px;
+                margin-top: 32px;
                 min-width: 220px;
             }
             @media (min-width:$screen-xl) {
-                margin-left: $marginL;
+                margin-left: 31px;
+                margin-bottom: 21px;
             }
         }
 
@@ -35,6 +38,7 @@ max-width: 1120px;
             text-align: center;
             margin-bottom: $marginS;
             @media (min-width:$screen-md) {
+                margin-top: 32px;
             }
         }
 
@@ -44,12 +48,15 @@ max-width: 1120px;
             @media (min-width: $screen-md) {
                 text-align: end;
                 margin-right: $marginM;
+                margin-bottom: 25px;
+                margin-top: 32px;
                 width: 213px;
                 max-width: 330px;
             }
             @media (min-width: $screen-xl) {
                 width: 330px;
-                margin-right: $marginL;
+                margin-right: 33px;
+                margin-bottom: 21px;
             }
         }
     }
